@@ -31,6 +31,10 @@ app.use(
 
 connectMongoDB();
 
+app.get('/', (req, res) => {
+  res.status(200).json({ message: 'hello world' });
+});
+
 app.get('/notes', async (req, res) => {
   const notes = await Note.find();
   res.status(200).json(notes);
