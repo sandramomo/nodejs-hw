@@ -33,7 +33,10 @@ const noteSchema = Schema(
       ],
     },
   },
-  { timestamps: true },
+  {
+    timestamps: true,
+    collection: 'notes'
+  },
 );
 
 
