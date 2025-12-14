@@ -4,11 +4,6 @@ import { createNote, deleteNote, getAllNotes, getNoteById, updateNote } from '..
 const router = Router();
 export default router;
 
-
-router.get('/', (req, res) => {
-  res.status(200).json({ message: 'hello world! welcome to notes bd' });
-});
-
 router.get('/notes', getAllNotes);
 router.post('/notes', createNote);
 
