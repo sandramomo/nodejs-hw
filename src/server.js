@@ -19,7 +19,7 @@ app.use(
 app.use(cors());
 app.use(logger);
 
-connectMongoDB();
+await connectMongoDB();
 
 app.use(notesRoutes);
 
