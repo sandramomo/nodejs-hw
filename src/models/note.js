@@ -23,10 +23,15 @@ const noteSchema = Schema(
       required: false,
       enum: TAGS,
     },
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: 'User',
+      required: true,
+    },
   },
   {
     timestamps: true,
-    collection: 'notes'
+    collection: 'notes',
   },
 );
 noteSchema.index(
